@@ -87,6 +87,12 @@ class ET_Campaign(ET_CUDSupportRest):
         self.path = "/hub/v1/campaigns/{id}"  # but set it back to the url with id for other operations to continue working
         return obj
 
+class ET_Asset(ET_CUDSupportRest):
+	def __init__(self):
+		super(ET_Asset, self).__init__()
+		self.path = 'asset/v1/content/assets'
+		self.urlProps = ["id"]
+		self.urlPropsRequired = []
 
 class ET_Campaign_Asset(ET_CUDSupportRest):
     def __init__(self):
